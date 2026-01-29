@@ -7,7 +7,7 @@ jobs:
   example-job:
     runs-on: ubuntu-latest
 
-    steps:
+steps:
       - name: Step One
         run: echo "This is step one"
 
