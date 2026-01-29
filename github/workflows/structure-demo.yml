@@ -1,15 +1,17 @@
-name: Workflow Structure Demo
+name: Structure Demo
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
-  example-job:
+  build:
     runs-on: ubuntu-latest
 
-  steps:
-      - name: Step One
-        run: echo "This is step one"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Step Two
-        run: echo "This is step two" 
+      - name: Print message
+        run: echo "Structure demo workflow running"
